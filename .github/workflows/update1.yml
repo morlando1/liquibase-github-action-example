@@ -1,9 +1,9 @@
 on: [push]
 
 jobs:
-  test-liquibase-action:
+  Liquibase-Update:
     runs-on: ubuntu-latest
-    name: Test Liquibase Action
+    name: Liquibase Update
     steps:
       - uses: actions/checkout@v2
       - uses: liquibase/liquibase-github-action@v3
