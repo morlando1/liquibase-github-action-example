@@ -1,16 +1,15 @@
-on: [push]
-
+on: workflow_dispatch
 jobs:
-  test-liquibase-action:
+  Generate-ChangeLog:
     runs-on: ubuntu-latest
     name: Test Liquibase Action
     steps:
       - uses: actions/checkout@v2
       - uses: liquibase/liquibase-github-action@v2
         with:
-          operation: 'update'
+          operation: 'generatechangelog'
           classpath: 'example/changelogs'
-          changeLogFile: 'samplechangelog.h2.sql'
+          changeLogFile: 'changelog.xml'
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           url: ${{ secrets.URL }}
