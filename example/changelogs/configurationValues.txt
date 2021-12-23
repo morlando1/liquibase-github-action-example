@@ -1,4 +1,4 @@
-# Set these values in CI/CD configuration to connect to an embedded H2 database and run example
+# Set these values in CI/CD configuration to connect to an remote MSSQL database and run example
 
 logLevel: info
 changeLogFile: samplechangelog.h2.sql
